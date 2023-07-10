@@ -1,0 +1,61 @@
+.practice-area{
+    .practice-wrapper{
+        .singel-practice{
+            .practice-image{
+                img{
+
+                }
+            }
+            .practice-contain{
+                transition: all .3s ease-in-out;
+                padding: 20px 15px;
+                @include respond-between(md, lg) {
+  
+                }
+                @include respond-between(sm, md) {
+                  padding: 25px 17px;
+                }
+                @include respond-between(xs, sm) {
+                    padding: 25px 10px;
+                  
+                }
+                @include respond-below(xs) {
+                    padding: 30px 15px;
+                  
+                }
+                .practice-title{
+                    h3{
+                        @include fonts($main-font, 12, 600, $sub-title-color, uppercase, 24px);
+                        margin-bottom: 25px;
+                        transition: all .3s ease-in-out;
+
+                        @include respond-between(md, lg) {
+  
+                        }
+                        @include respond-between(sm, md) {
+                          margin-bottom: 18px;
+                        }
+                        @include respond-between(xs, sm) {
+                          margin-bottom: 16px;
+                        }
+                        @include respond-below(xs) {
+                          margin-bottom: 10px;
+                        }
+                    }
+                }
+                .practice-dis{
+                    p{
+                        @include para-style;
+                    }
+                }
+            }
+            &:hover .practice-title h3{
+                color: $title-color;
+            }
+            &:hover .practice-contain{
+                background-color: $service-bg;
+                box-shadow: 10px 9px 16px -2px $shadow-bg;
+            }
+        }
+    }
+}

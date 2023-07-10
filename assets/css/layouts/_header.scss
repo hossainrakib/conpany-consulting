@@ -1,0 +1,162 @@
+.header-area{
+    .header-top{
+        background-color: $second-bg;
+
+        .our-contact, .share-us{
+            height: 50px;
+
+            @include respond-between(md, lg) {
+      
+            }
+            @include respond-below(md) {
+                height: 40px
+            }
+            @include respond-between(xs, sm) {
+              
+            }
+            @include respond-below(xs) {
+              
+            }
+        }
+        .our-contact{
+            @include fonts($main-font, 12, 600, $white-color, lowercase, auto);
+
+            @include respond-below(xs) {
+                font-size: 8px;
+            }
+            .phone-number ,.email-address{
+                p{
+                    span{
+                        text-transform: capitalize;
+                    }
+                }
+                .icon{
+                    i{
+                    }
+                }
+            }
+            .phone-icon, .email-icon{
+                i{
+                    margin-right: 10px;
+
+                    @include respond-below(xs) {
+                        margin-right: 6px;
+  
+                    }
+                }
+            }
+        }
+        .share-us{
+            background-color: $second-bg;
+            font-size: 12px;
+            color: $white-color;
+            text-transform: capitalize;
+
+            @include respond-below(xs) {
+                font-size: 8px;
+            }
+            .social-icon{
+
+                i{
+                    padding: 0 8px !important;
+                    transition: .3s ease-in-out;
+                    
+                    @include respond-below(xs) {
+                        padding: 0 5px;
+                    }
+                    &:hover {
+                        color: $sub-title-color;
+                        
+                    }
+                }
+                li{
+                    padding: 0 8px !important;
+                }
+            }
+            button{
+                a{
+                    @include btn;
+                }
+                margin-left: 8px;
+            }
+        }
+    }
+    .main-header{
+        background: $white-bg;
+        &.fixed-top{
+            border-bottom: 1px solid $main-bg;
+        }
+        .navbar{
+            .navbar-brand{
+                .image{
+                    img{
+
+                        @include respond-below(md) {
+                          height: 80%;
+                          width: 80%;
+                        }
+                    }
+                }
+            }
+            button.navbar-toggler{
+                &:focus {
+                    text-decoration: none;
+                    outline: 0;
+                    box-shadow: 0 0 0 2px $main-bg;
+                }
+                span{
+                    height: auto;
+                    width: auto;
+                    i{
+                        font-size: 16px;
+                        color: $title-color;
+                        line-height: 22px;
+                    }
+                }
+            }
+            .navbar-collapse{
+                ul.navbar-nav{
+                    @include respond-below(md) {
+                        background: $white-bg;
+                    }
+                    li.nav-item{
+                        &.current{
+                            a{
+                              color: $sub-title-color !important;
+                            }
+                        }
+                        &:last-child a{
+                            padding-right: 0 !important;
+                        }
+                        a.nav-link{
+                            @include fonts($main-font, 14, 600, $title-color, uppercase, auto);
+                            padding:20px 20px;
+                            transition: color .3s ease-in-out;
+
+                            @include respond-between(md, lg) {
+                                padding: 18px;
+                            }
+                            @include respond-between(sm, md) {
+                              padding: 10px 0;
+                            }
+                            @include respond-between(xs, sm) {
+                              padding: 8px 0;
+                            }
+                            @include respond-below(xs) {
+                              padding: 8px 0;
+                            }
+                        }
+                        &:hover a{
+                            color: $sub-title-color;
+                        }
+                        @include respond-below(md) {
+                            &:hover a{
+                                background-color: $service-bg;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

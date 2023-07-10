@@ -1,0 +1,18 @@
+.scroll-top-area{
+    bottom: 40px !important;
+    right: 40px !important;
+    left: inherit;
+    .scroll{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: $main-bg;
+        .icon{
+
+            i{
+                font-size: 20px;
+                color: $white-color;
+            }
+        }
+    }
+}

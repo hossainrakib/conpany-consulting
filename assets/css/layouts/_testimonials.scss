@@ -1,0 +1,81 @@
+.testimonials-area{
+    .section-heading{
+        h2{
+            color: $white-color;
+        }
+        .section-dis{
+            p{
+                color: $white-color;
+            }
+        }
+    }
+    .single-testimonials{
+        .author-contain{
+            @include respond-between(md, lg) {
+  
+            }
+            @include respond-between(sm, md) {
+              
+            }
+            @include respond-between(xs, sm) {
+              
+            }
+            @include respond-below(sm) {
+              width: 100% !important;
+            }
+            .author-profile{
+                .image{
+                    img{
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .author-info{
+                h2{
+                    @include fonts($main-font, 12, 400, $white-color, uppercase, auto);
+                    margin: 20px 0;
+                    @include respond-between(md, lg) {
+  
+                    }
+                    @include respond-between(sm, md) {
+                    }
+                    @include respond-between(xs, sm) {
+                      margin: 15px 0;
+                    }
+                    @include respond-below(xs) {
+                      margin: 12px 0;
+                    }
+                }
+            }
+            .author-ratting{
+                .icon{
+                    margin: 0 5px;
+                    i{
+                        font-size: 16px;
+                        color: $ratting-color;
+                    }
+                }
+            }
+        }
+        .author-dis{
+            p{
+                @include para-style;
+                color: $white-color;
+                @include respond-between(md, lg) {
+  
+                }
+                @include respond-between(sm, md) {
+                  
+                }
+                @include respond-between(xs, sm) {
+                  
+                }
+                @include respond-below(sm) {
+                  text-align: justify;
+                  margin-top: 20px;
+                }
+            }
+        }
+    }
+    
+}

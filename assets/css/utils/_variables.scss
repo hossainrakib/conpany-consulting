@@ -1,0 +1,221 @@
+//text-color
+$title-color:#4a657d;
+$white-color:#fff;
+$sub-title-color:#1f87e4;
+$arrow-color:#1d1d1d;
+$para-color:#4a657d;
+$ratting-color:#1f87e4;
+$socail-color:#1f87e4;
+$place-color:#cccccc;
+
+//backgroutd-color
+
+$btn-bg:#1f87e4;
+$service-bg:#edeff2;
+$main-bg:#1f87e4;
+$footer-bg:#0e151b;
+$second-bg:#4a657d;
+$white-bg:#fff;
+$shadow-bg:#afb3ba;
+
+//section-padding
+
+.section-padding{
+    padding: 100px 0px;
+
+    @include respond-between(md, lg) {
+         padding: 80px 0px;
+    }
+    @include respond-between(sm, md) {
+         padding: 60px 0px;
+    }
+    @include respond-between(xs, sm) {
+         padding: 40px 0px;
+    }
+    @include respond-below(xs) {
+          padding: 30px 0px;
+    }
+
+}
+.speace-t-70 {
+    padding-top: 70px;
+
+    @include respond-between(md, lg) {
+        padding-top: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 30px;
+    }
+    @include respond-below(xs) {
+        padding-top: 26px;
+    }
+}
+.speace-b-70 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 30px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 26px;
+    }
+}
+.speace-t-60 {
+    padding-top: 60px !important;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px !important;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px !important;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px !important;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px !important;
+    }
+}
+.speace-b-60 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+.speace-t-50 {
+    padding-top: 50px;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+
+.speace-b-50 {
+    padding-bottom: 50px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+
+.speace-t-40 {
+    padding-top: 40px;
+
+    @include respond-between(md, lg) {
+        padding-top: 30px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 25px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-t-30 {
+    padding-top: 30px;
+
+    @include respond-between(md, lg) {
+        padding-top: 25px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 20px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 18px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-t-20 {
+    padding-top: 20px;
+
+    @include respond-between(md, lg) {
+        padding-top: 18px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 16px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 14px;
+    }
+    @include respond-below(xs) {
+        padding-top: 10px;
+    }
+}
+//bg-size
+.bg-cover{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+}
+//after-bg
+.add-bg{
+    position: relative;
+    &::after{
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        z-index: -155;
+    }
+}
+//html&body
+html, body{
+    height: 100%;
+    width: 100%;
+}
+//button
+.btn{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 0 !important;
+}

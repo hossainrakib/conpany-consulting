@@ -1,0 +1,78 @@
+.services-area{
+    .service-wrapper{
+        .single-service{
+            transition: all .3s ease-in-out;
+            background-color: $service-bg;
+            padding: 70px 40px;
+
+            @include respond-between(md, lg) {
+                 padding: 50px 20px;
+            }
+            @include respond-between(sm, md) {
+              padding: 40px 20px;
+            }
+            @include respond-between(xs, sm) {
+                padding: 40px 20px;
+              
+            }
+            @include respond-below(xs) {
+                padding: 30px 15px;
+              
+            }
+            .service-icon{
+                i{
+                    font-size: 25px;
+                    transition: all .3s ease-in-out;
+                    color: $title-color;
+                }
+            }
+            .service-title{
+                h2{
+                    transition: all .3s ease-in-out;
+                    @include fonts($main-font, 24, 600, $title-color, uppercase, 24px);
+
+                    @include respond-between(md, lg) {
+                        font-size: 20px
+                    }
+
+                    @include respond-below(xs) {
+                      font-size: 17px;
+                      line-height: 20px;
+                    }
+                }
+            }
+            .service-dis{
+                p{
+                    @include para-style;
+                    transition: all .3s ease-in-out;
+                    color: $para-color !important;
+                }
+            }
+            .link{
+                button.btn{
+                    a{
+                        @include btn;
+                    }
+                }
+            }
+            &:hover {
+                background-color: $main-bg;
+                transform: scaleY(1.15);
+            }
+            &:hover h2{
+                color: $white-color !important;
+            }
+            &:hover i{
+                color: $white-color !important;
+                font-size: 30px;
+            }
+            &:hover p{
+                color: $white-color !important;
+            }
+            &:hover .link button a{
+                background-color: $white-bg;
+                color: $title-color;
+            }
+        }
+    }
+}

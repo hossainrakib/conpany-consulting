@@ -1,0 +1,188 @@
+.hero-area{
+    .slide-active{
+        .slick-list, .slick-track{
+            height: 100%;
+        }
+        button.slick-arrow{
+
+            border: none;
+            background-color: $main-bg;
+            height: 70px;
+            width: 70px;
+            text-align: center;
+            position: absolute;
+            z-index: 999;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            transition: all .3s ease-in-out;
+
+            @include respond-between(md, lg) {
+                height: 60px;
+                width: 60px;
+            }
+            @include respond-between(sm, md) {
+                height: 50px;
+                width: 50px;
+            }
+            @include respond-between(xs, sm) {
+                height: 40px;
+                width: 50px;
+            }
+            @include respond-below(xs) {
+                height: 35px;
+                width: 50px;
+            }
+            .arrows{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                i{
+                    font-size: 16px;
+                    color: $white-color;
+                    line-height: 70px;
+                    transition: all .3s ease-in-out;
+
+                    @include respond-between(md, lg) {
+                        line-height: 60px;
+  
+                    }
+                    @include respond-between(sm, md) {
+                         line-height: 50px;
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                         line-height: 40px;
+                      
+                    }
+                    @include respond-below(xs) {
+                        line-height: 35px;
+                      
+                    }
+                } 
+                p{
+                    @include fonts($main-font, 14, 600, $arrow-color, capitalize, auto);
+                    background-color: $main-bg;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 150px;
+                    line-height: 70px;
+                    transition: all .3s ease-in-out;
+                    z-index: -1;
+                    visibility: hidden;
+                    opacity: 0;
+                    @include respond-between(md, lg) {
+                        line-height: 60px;
+                        width: 120px;
+                    }
+                    @include respond-between(sm, md) {
+                         line-height: 50px;
+                         width: 100px;
+                    }
+                    @include respond-between(xs, sm) {
+                         line-height: 40px;
+                         width: 80px;
+                    }
+                    @include respond-below(xs) {
+                       display: none;
+                    }
+                }
+            }
+            &:hover .arrows p{
+                right: 70px;
+                visibility: visible;
+                opacity: 1;
+
+                @include respond-between(md, lg) {
+                    right: 60px;
+                }
+                @include respond-between(sm, md) {
+                  right: 50px;
+                }
+                @include respond-between(xs, sm) {
+                  right: 45px;
+                }
+                @include respond-below(xs) {
+                  right: 40px;
+                }
+            }
+            &:hover {
+                background-color: $white-bg;
+            }
+            &:hover i{
+                color: $title-color;
+            }
+        }
+        button.slick-prev{
+            left: 0 !important;
+            transition: all .6s ease-in-out !important;
+            .arrows{
+                p{
+                    left: 0;
+                    transition: all .3s ease-in-out;
+                }
+            }
+            &:hover .arrows p{
+                left: 70px;
+                visibility: visible;
+                opacity: 1;
+            }
+            p{
+
+            }
+        }
+        .slide-contain{
+            .slide-heading{
+                h2{
+                    @include fonts($main-font, 50, 600, $title-color, capitalize, auto);
+
+                    @include respond-between(md, lg) {
+                        font-size: 45px
+                    }
+                    @include respond-between(sm, md) {
+                        font-size: 40px
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                        font-size: 30px
+                      
+                    }
+                    @include respond-below(xs) {
+                        font-size: 25px
+                      
+                    }
+                }
+            }
+            .slide-dis{
+                p{
+                    @include fonts($main-font, 14px, 600, $title-color, capitalize, auto);
+                    padding: 30px 0 40px 0;
+
+                    @include respond-between(md, lg) {
+  
+                    }
+                    @include respond-between(sm, md) {
+                      padding: 25px 0 30px 0;
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                         padding: 20px 0 25px 0;
+                      
+                    }
+                    @include respond-below(xs) {
+                         padding: 20px 0 20px 0;
+                      
+                    }
+                }
+            }
+            button{
+                a{
+                    @include btn;
+                }
+            }
+        }
+    }
+}

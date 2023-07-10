@@ -1,0 +1,48 @@
+.counter-area{
+    .section-heading{
+        h2{
+            color: $white-color !important;
+
+        }
+        .section-dis{
+            p{
+                 color: $white-color !important;
+            }
+        }
+    }
+    
+    .counter-wrapper{
+        .single-counte{
+            .counte-title{
+                h3{
+                    @include fonts($main-font, 12, 600, $white-color, uppercase, 24px);
+                    transition: all .3s ease-in-out;
+                }
+            }
+            .counte-num{
+                a{
+                    @include fonts($main-font, 54, 600, $white-color, uppercase, 24px);
+
+                    @include respond-between(md, lg) {
+                        @include texts(46,22);
+                    }
+                    @include respond-between(sm, md) {
+                        @include texts(35,20);
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                        @include texts(30,22);
+                      
+                    }
+                    @include respond-below(xs) {
+                        @include texts(28,20);
+                      
+                    }
+                }
+            } 
+            &:hover .counte-title h3{
+                color: $sub-title-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,161 @@
+.footer-area{
+    background-color: $footer-bg;
+    .footer-top{
+        .footer-widget{
+            .web-logo {
+                img{
+    
+                }
+            }
+            .footer-dis{
+                p{
+                    @include para-style;
+                    color: $white-color;
+                }
+            }
+            .our-followers{
+                .follow-num{
+                    h2{
+                        @include fonts($main-font, 14, 400, $white-color, lowercase, auto);
+                        margin-bottom: 20px;
+                        span{
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+                .share-icon{
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 1px ;
+                        top: 0;
+                        left: 0;
+                        background-color: $white-color;
+                        opacity: .5;
+                    }
+                    ul{
+                        li.title{
+                            a{
+                                @include fonts($main-font, 18, 400, $white-color, lowercase, 24px);
+                                padding-left: 0 !important;
+    
+                            }
+                        }
+                        li{
+                            a{
+                                font-size: 18px;
+                                color: $socail-color;
+                                padding: 15px 7px;
+                                display: inline-block;
+                                transition: all .3s ease-in-out;
+                                i{
+    
+                                }
+                            }
+                            &:hover a{
+                                color: $white-color;
+                            }
+                        }
+                    }
+                }
+            }
+            .subscribe-contain{
+                width: 80%;
+                margin-top: 25px;
+    
+                @include respond-between(md, lg) {
+      
+                }
+                @include respond-between(sm, md) {
+                  margin-top: 20px;
+                  width: 100%;
+                }
+                @include respond-between(xs, sm) {
+                  margin-top: 15px;
+                  width: 100%;
+                }
+                @include respond-below(xs) {
+                  margin-top: 10px;
+                  width: 100%;
+                }
+                input[type="email"]{
+                    padding: 15px 10px;
+                    background-color: $white-bg;
+    
+                }
+                input.form-control::placeholder{
+                    @include fonts($main-font, 15, 400, $place-color !important, capitalize, 24px);
+                }
+                input[type="submit"]{
+                    @include fonts($main-font, 14, 400, $white-color !important, uppercase, auto);
+                    padding: 0 40px;
+                    background-color: $main-bg;
+                    border: none;
+    
+                    @include respond-between(sm, md) {
+                      padding: 0 30px
+                    }
+                    @include respond-between(xs, sm) {
+                      padding: 0 25px;
+                      font-size: 12px;
+                    }
+                    @include respond-below(xs) {
+                      padding: 0 20px;
+                      font-size: 10px;
+                    }
+    
+                }
+            }
+            .footer-title{
+                h2{
+                    @include fonts($main-font, 14, 400, $white-color, uppercase, auto);
+                    margin-bottom: 5px;
+    
+                }
+            }
+            .single-blog{
+                .blog-img{
+                    width: 35%;
+                    .image{
+                        img{
+    
+                        }
+                    }
+                }
+                .blog-contain{
+                    width: 65%;
+                    padding-left: 15px;
+                    .blog-dis{
+                        p{
+                            @include fonts($main-font, 12, 400, $white-color, uppercase, 18px)
+                        }
+                    }
+                    .blog-date{
+                        span{
+                            @include fonts($main-font, 10, 400, $sub-title-color, uppercase, 24px);
+                            margin-top:10px;
+                        }
+                    }
+                }
+            }
+            .link{
+                a{
+                    @include fonts($main-font, 13, 400 ,$white-color, capitalize, 22px);
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    .copy-right{
+        &::after{
+            @include after($white-bg, 1px, 100%, 0, none,0, none,);
+            opacity: .4;
+        }
+        p{
+            @include para-style;
+            color: $white-color;
+            padding: 15px 0;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+/*font-family*/
+@mixin font($font-family, $font-size, $font-weight) {
+    font-family: $font-family;
+    font-size: $font-size + px;
+    font-weight: $font-weight;
+}
+
+/* text-size*/
+@mixin text($text-color, $text-transfrom, $line-height) {
+    color: $text-color;
+    text-transform: $text-transfrom;
+    line-height: $line-height;
+}
+/*font-text-all*/
+@mixin fonts ($font-family, $font-size, $font-weight, $text-color, $text-transfrom, $line-height) {
+    font-family: $font-family;
+    font-size: $font-size + px;
+    font-weight: $font-weight;
+    color: $text-color;
+    text-transform: $text-transfrom;
+    line-height: $line-height;
+}
+
+/* font-line-height-size*/
+@mixin texts($font-size, $line-height) {
+    font-size: $font-size + px;
+    line-height: $line-height + px;
+}
+/*before after*/
+@mixin after($border-color, $height, $width, $top, $bottom , $left, $right) {
+    height: $height;
+    width: $width;
+    left: $left;
+    right: $right;
+    top: $top;
+    bottom: $bottom;
+    content: '';
+    position: absolute;
+    background:$border-color;
+
+}
+
+/*btn*/
+
+@mixin btn {
+    @include fonts($main-font, 14, 600, $white-color, uppercase, auto);
+    background-color: $btn-bg;
+    padding: 20px 40px;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+        color :$title-color;
+        background-color: $white-bg;
+    }
+
+    @include respond-between(md, lg) {
+        padding: 18px 35px;
+  
+    }
+    @include respond-between(sm, md) {
+         padding: 18px 30px;
+      
+    }
+    @include respond-between(xs, sm) {
+        padding: 16px 25px;
+      
+    }
+    @include respond-below(xs) {
+         padding: 14px 22px;
+      
+    }
+}
+/*para-style*/
+
+@mixin para-style {
+    @include fonts($main-font, 14, 300, $para-color, capitalize, 24px);
+
+    @include respond-between(md, lg) {
+        line-height: 22px;
+    }
+    @include respond-between(sm, md) {
+      @include texts(13, 20);
+    }
+    @include respond-between(xs, sm) {
+        @include texts(13, 17);
+      
+    }
+    @include respond-below(xs) {
+        @include texts(12, 16);
+      
+    }
+}
+/**/
+/**/
+/**/

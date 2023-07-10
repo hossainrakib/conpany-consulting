@@ -1,0 +1,86 @@
+.about-area{
+    .about-contain{
+        .about-heading{
+            h2{
+                @include fonts($main-font, 36, 600, $title-color, capitalize, auto);
+                margin: 20px 0 30px 0;
+
+                @include respond-between(md, lg) {
+                    font-size: 32px;
+                }
+                @include respond-between(sm, md) {
+                    margin: 18px 0 24px 0;
+                    font-size: 28px;
+                }
+                @include respond-between(xs, sm) {
+                    margin: 16px 0 20px 0;
+                    font-size: 24px;
+                }
+                @include respond-below(xs) {
+                    margin: 14px 0 18px 0;
+                    font-size: 20px;
+                }
+                span{
+                    color: $sub-title-color;
+                }
+            }
+        }
+        .about-dis{
+            p{
+                @include para-style;
+            }
+        }
+        .link{
+            button{
+                a{
+                    @include btn;
+                    &:hover {
+                        background-color: $title-color;
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+    &.bg-about{
+        position: relative;
+
+        &::after{
+            position: absolute;
+            content: '';
+            height: 100%;
+            width: 38%;
+            background-image: url(../../img/about/man.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            top: 0;
+            left: 0;
+            @include respond-between(md, lg) {
+            }
+            @include respond-below(md) {
+              width: 100%;
+              z-index: -5;
+            }
+            @include respond-between(xs, sm) {
+              
+            }
+            @include respond-below(xs) {
+              
+            }
+        }
+        @include respond-below(md) {
+            &::before{
+                position: absolute;
+                content: '';
+                height: 100%;
+                width: 100%;
+                background-color: $white-bg;
+                top: 0;
+                left: 0;
+                opacity: .8;
+                z-index: -3;
+            }
+        }
+    }
+}

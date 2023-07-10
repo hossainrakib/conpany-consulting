@@ -1,0 +1,21 @@
+.section-heading{
+    h2{
+        @include fonts($main-font, 24, 600, $title-color, uppercase, 23px);
+
+        @include respond-between(sm, md) {
+          font-size: 22px;
+        }
+        @include respond-between(xs, sm) {
+          font-size: 20px;
+        }
+        @include respond-below(xs) {
+          font-size: 18px;
+        }
+    }
+    .section-dis{
+        p{
+            @include para-style;
+        }
+    }
+}
+
